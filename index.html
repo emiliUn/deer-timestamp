@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- NOTHING TO SEE HERE-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style/global.css"/>
+        <link rel="stylesheet" href="style/index.css"/>
+        <title>Timestamp converter</title>
+    </head>
+    <body class="indexPage">
+        <header>
+            <div id="title"><img alt="Deer Timestamp" src="assets/title3.png"/></div>
+            
+            <div id="optionsButtons">
+                <label class="switch">
+                    <input type="checkbox" id="ms_s_checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <img id="reload" src="assets/reload_arrows.png"/>
+            </div>
+
+        </header>
+        
+        <fieldset>
+            <legend>Timestamp</legend>
+            (s/ms): <input type="text" id="ts_user_input" />
+            <input id = "submit_ts_btn" type="image" value="Go !" src="assets/right_arrow.png" alt="btn"/>
+
+        </fieldset>
+        
+        <fieldset>
+            <legend>Local</legend>
+            <div id="date_user_input">        
+                <input min="1970" type="number" class="date_input" id="y_user_input" />/
+                <input min="1" max="12" type="number" class="date_input" id="mon_user_input" />/
+                <input min="1" max="31" type="number" class="date_input" id="d_user_input" />
+                <input min="1" max="12" type="number" class="date_input" id="h_user_input" />:
+                <input min="0" max="60" type="number" class="date_input" id="min_user_input" />:
+                <input min="0" max="60" type="number" class="date_input" id="s_user_input" />
+                <input id = "submit_date_btn" type="image" value="Go !" src="assets/right_arrow.png" alt="btn"/>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ISO8601 - Zulu</legend>
+            <div id = "ts_iso_format"></div>
+        </fieldset>
+
+        <fieldset>
+            <legend>UTC</legend>
+            <div id = "ts_utc_format"></div>
+        </fieldset>
+
+
+
+        <div id="error_div"></div>
+        
+    </body>
+    <footer>
+        <a href="info.html"><img id="i_icon" src="assets/i_icon.png"/></a>
+    </footer>
+    <script type="text/javascript" src="scripts/main_script.js"></script>
+</html>
+

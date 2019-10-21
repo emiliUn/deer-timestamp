@@ -1,0 +1,21 @@
+{
+    "name": "Mon extension",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "applications": {
+        "gecko": {
+            "id": "ts_extension@emilienbenaiteau.fr"
+        }
+    },
+    "browser_action": {
+        "default_title": "Ts converter",
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "512": "assets/ico512-5.png"
+    },
+    "background": {
+        "scripts": ["scripts/main_script.js", "scripts/const.js"],
+        "persistent": true
+    }
+}

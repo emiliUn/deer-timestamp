@@ -1,0 +1,41 @@
+html {
+    border: 1px solid gray;
+}
+
+/* Define the wdows size */
+body{
+    width:280px;
+    font-size: 14px;
+}
+
+footer{
+    padding: 5px;
+    height: 25px;
+    background-color: #eeeeee;
+    /* TODO something better ... */
+    margin-bottom: -7px;
+    margin-right: -7px;
+    margin-left: -7px;
+    margin-top: 5px; 
+}
+
+/* CSS for header */
+header{
+    display: flex;
+    flex-direction:row;
+    /* flex-wrap: wrap; */
+}
+
+#title{
+    text-align: center;
+    flex: 0;
+    border-right:0px;
+}
+
+#title img{
+    width: 200px;
+}
+
+.indexPage #title{
+    border-right: 1.5px solid #000066;
+}
