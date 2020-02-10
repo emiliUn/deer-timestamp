@@ -12,7 +12,7 @@
         "default_popup": "index.html"
     },
     "icons": {
-        "512": "assets/ico512-5.png"
+        "512": "assets/ico512-7.png"
     },
     "background": {
         "scripts": ["scripts/main_script.js", "scripts/const.js"],
