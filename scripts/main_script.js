@@ -14,8 +14,6 @@ function initFields(){
 }
 
 // --- LISTENERS ---
-// true or false from a checkbox : false = secondes, true = milliseconds
-// document.getElementById("ms_s_checkbox").addEventListener("click", processInputTs); 
 document.getElementById("ms_s_checkbox").addEventListener("click", processInputTs);
 document.getElementById("submit_ts_btn").addEventListener("click", processInputTs); 
 document.getElementById("submit_date_btn").addEventListener("click", processInputDate); 
@@ -24,12 +22,21 @@ document.getElementById("reload").addEventListener("click", initFields);
 
 
 // --- DISPLAY FUNCTIONS ---
+
+/**
+ * Display iso and utc date in html fields
+ * @param {*} dateObj 
+ */
 function displayDate(dateObj){
     // Display ISO and UTC
     document.getElementById('ts_iso_format').innerHTML = dateObj.toISOString();
     document.getElementById('ts_utc_format').innerHTML = dateObj.toUTCString();
 }
 
+/**
+ * Display human readable date in html fields
+ * @param {*} dateObj 
+ */
 function displayHumanDate(dateObj){
     // Display human readable date
     document.getElementById("y_user_input").defaultValue  = dateObj.getFullYear();
@@ -40,6 +47,10 @@ function displayHumanDate(dateObj){
     document.getElementById("s_user_input").defaultValue  = dateObj.getSeconds();
 }
 
+/**
+ * Display timestamp date (sec/mills) in html fields
+ * @param {*} dateObj 
+ */
 function displayTsDate(dateObj){
     // Display TS
     let tsToDisplay = + dateObj;
@@ -147,7 +158,7 @@ function checkInputeDateFields(yUserInput, monUserInput, dUserInput, hUserInput,
     }
 }
 
-
+// --- STRINGS DEFINITION ---
 var ERR_MSG_INPUT_DATE = "Date input is empty or not a number"; 
 var ERR_MSG_MISSING_TS = "Missing timestamp";
 var ERR_MSG_WRONG_TS_FROMAT = "Wrong timestamp format"
