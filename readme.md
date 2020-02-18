@@ -18,7 +18,7 @@ Firefox : go on https://addons.mozilla.org/fr/firefox/. Find and download the ex
 
 Chrome : go on https://chrome.google.com/webstore/category/extensions. Find and download the extensions.
 
-### :nut_and_bolt : Installation from source code (debug mode)
+### :nut_and_bolt: Installation from source code (debug mode)
 
 You can get the extensions without using an official extensions store. You will use the debugging mode. If the browser is closed, you will have to re-load the extension.
 
