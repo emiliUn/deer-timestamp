@@ -4,34 +4,44 @@ Deer Timestamp Add-On is a module that allow you to convert a Unix timestamp int
 
 This add-on is multi-platform and mlti-web-borwser (see XXX for compatibility list)
 
-## :smiley: Getting Started - Release
+## :smiley: Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for standard use or debugging mode.
 
 ### Prerequisites
 
-You need a web-brower. We recommend Firefox and Chrome. For supported version, see : XXX .
+You need a web-brower. We recommend Firefox and Chrome. 
+Firefox minimum recommanded version: Firefox Quantum 59 (59.0)
+Chrome minimum recommanded version: Chrome 64.0.3282
 
 ### Installation from store
 
-Firefox : go on https://addons.mozilla.org/fr/firefox/. Find and download the extensions.
+Firefox: go on https://addons.mozilla.org/fr/firefox/. Find and download the extensions.
+For more information, read Firefox support: https://support.mozilla.org/en-US/products/firefox
 
-Chrome : go on https://chrome.google.com/webstore/category/extensions. Find and download the extensions.
+Chrome: go on https://chrome.google.com/webstore/category/extensions. Find and download the extensions.
+For more information, read Google support: https://support.google.com/chrome_webstore/answer/2664769
 
-### :nut_and_bolt: Installation from source code (debug mode)
+### :nut_and_bolt: Manual installation (from source code)
 
-You can get the extensions without using an official extensions store. You will use the debugging mode. If the browser is closed, you will have to re-load the extension.
+You can get the extensions without using an official extensions store. You will use the debugging mode. If the browser is closed, you will have to re-load the extension. Using this method allow you to install unreleased and depricated version. Furthermore, you can debug the extension.
 
 #### Firefox
 
-* Download the source code from github : https://github.com/emiliUn/deer-timestamp
-* Open firefox, go to this url : "about:debugging#/runtime/this-firefox". It open the debugging interface.
+* Download the source code from github: https://github.com/emiliUn/deer-timestamp
+* Open firefox, go to this url: "about:debugging#/runtime/this-firefox". It open the debugging interface.
 * Click on "Load Temporary Add-on…"
 * Choose the manifest of the extension (or any extension's file)
 
 #### Chrome
 
-Coming soon !
+* Download the source code from github: https://github.com/emiliUn/deer-timestamp
+* Open Chrome, go to this url: "chrome://extensions/"/ It open the extensions interface.
+* Enable the "developer mode" (top-right)
+* Click on "Load unpacked extensions ..."
+* Choose the manifest of the extension (or any extension's file)
+
+For more information, read google support: https://support.google.com/chrome_webstore/answer/2664769
 
 ## :pick: Built With
 
