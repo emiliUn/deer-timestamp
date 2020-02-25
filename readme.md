@@ -2,7 +2,7 @@
 
 Deer Timestamp Add-On is a module that allow you to convert a Unix timestamp into a human readable date. A human readable date can be converted into timestamp too. Pretty amazing ! The module support iso8601 and UTC format. It display timestamp in seconds or milliseconds.
 
-This add-on is multi-platform and mlti-web-borwser (see XXX for compatibility list)
+This add-on is multi-platform and mlti-web-borwser.
 
 ## :smiley: Getting Started
 
@@ -10,9 +10,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You need a web-brower. We recommend Firefox and Chrome. 
-Firefox minimum recommanded version: Firefox Quantum 59 (59.0)
-Chrome minimum recommanded version: Chrome 64.0.3282
+You need a web-brower. We recommend Firefox and Chrome :
+* Firefox minimum recommanded version: Firefox Quantum 59 (59.0)
+* Chrome minimum recommanded version: Chrome 64.0.3282
 
 ### Installation from store
 
@@ -53,9 +53,7 @@ For more information, read google support: https://support.google.com/chrome_web
 
 ## :computer: Contributing
 
-Contact us at xxx@xxx.com or visit www.xxx.com
-
-Please read [CONTRIBUTING.md](https://xxxxx.github.com/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Contact us at sample@sample.com (or visit https://github.com/emiliUn) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## :pencil2: Authors
 
@@ -69,9 +67,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ### Music listned during development
 
-The Glitch Mob - Drink the Sea
-Mike Oldfield - Ommadawn
-Jean-Michel Jarre - Equinoxe Infinity
+* The Glitch Mob - Drink the Sea
+* Mike Oldfield - Ommadawn
+* Jean-Michel Jarre - Equinoxe Infinity
 
 ### Vegan
 No living species have been exploited during the develo. If you contribute, please, do not use or hurt any living species during your development
