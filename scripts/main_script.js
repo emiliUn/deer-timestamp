@@ -41,12 +41,12 @@ function displayDate(dateObj){
 function displayHumanDate(dateObj){
     dateObj = new Date(dateObj);
     // Display human readable date
-    document.getElementById("y_user_input").defaultValue  = dateObj.getFullYear();
-    document.getElementById("mon_user_input").defaultValue  = dateObj.getMonth()+1;
-    document.getElementById("d_user_input").defaultValue  = dateObj.getDate();
-    document.getElementById("h_user_input").defaultValue  = dateObj.getHours();
-    document.getElementById("min_user_input").defaultValue  = dateObj.getMinutes();
-    document.getElementById("s_user_input").defaultValue  = dateObj.getSeconds();
+    document.getElementById("y_user_input").value  = dateObj.getFullYear();
+    document.getElementById("mon_user_input").value  = dateObj.getMonth()+1;
+    document.getElementById("d_user_input").value  = dateObj.getDate();
+    document.getElementById("h_user_input").value  = dateObj.getHours();
+    document.getElementById("min_user_input").value  = dateObj.getMinutes();
+    document.getElementById("s_user_input").value  = dateObj.getSeconds();
 }
 
 /**
@@ -57,7 +57,8 @@ function displayTsDate(dateObj){
     // Display TS
     let tsToDisplay = + dateObj;
     document.getElementById("ms_s_checkbox").checked ? null : tsToDisplay = Math.round(tsToDisplay/1000); // remove 3 last number (mills)
-    document.getElementById("ts_user_input").defaultValue  = tsToDisplay;
+    console.log(tsToDisplay)
+    document.getElementById("ts_user_input").value  = tsToDisplay;
 }
 
 /**
