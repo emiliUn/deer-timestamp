@@ -57,7 +57,6 @@ function displayTsDate(dateObj){
     // Display TS
     let tsToDisplay = + dateObj;
     document.getElementById("ms_s_checkbox").checked ? null : tsToDisplay = Math.round(tsToDisplay/1000); // remove 3 last number (mills)
-    console.log(tsToDisplay)
     document.getElementById("ts_user_input").value  = tsToDisplay;
 }
 
