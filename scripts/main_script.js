@@ -28,6 +28,7 @@ document.getElementById("reload").addEventListener("click", initFields);
  * @param {*} dateObj 
  */
 function displayDate(dateObj){
+    dateObj = new Date(dateObj);
     // Display ISO and UTC
     document.getElementById('ts_iso_format').innerHTML = dateObj.toISOString();
     document.getElementById('ts_utc_format').innerHTML = dateObj.toUTCString();
@@ -38,6 +39,7 @@ function displayDate(dateObj){
  * @param {*} dateObj 
  */
 function displayHumanDate(dateObj){
+    dateObj = new Date(dateObj);
     // Display human readable date
     document.getElementById("y_user_input").defaultValue  = dateObj.getFullYear();
     document.getElementById("mon_user_input").defaultValue  = dateObj.getMonth()+1;
@@ -54,7 +56,7 @@ function displayHumanDate(dateObj){
 function displayTsDate(dateObj){
     // Display TS
     let tsToDisplay = + dateObj;
-    document.getElementById("ms_s_checkbox").checked ? null : tsToDisplay = tsToDisplay.toString().substr(0, 9); // remove 3 last number (mills)
+    document.getElementById("ms_s_checkbox").checked ? null : tsToDisplay = Math.round(tsToDisplay/1000); // remove 3 last number (mills)
     document.getElementById("ts_user_input").defaultValue  = tsToDisplay;
 }
 
@@ -86,7 +88,7 @@ function processInputTs(){
     const err = validateTs(userTs);
 
     if(err === null){
-        // if user input a sec ts we converti it into a mill ts
+        // if user input a sec ts we convert it into a mill ts
         userTs.length <= 10 ? userTs = userTs*1000 : null;
         dateObj = new Date(+userTs);
         displayTsDate(dateObj); displayHumanDate(dateObj); displayDate(dateObj);
