@@ -15,7 +15,7 @@
         "512": "assets/ico512-7.png"
     },
     "background": {
-        "scripts": ["scripts/main_script.js", "scripts/const.js"],
+        "scripts": ["scripts/main_script.js"],
         "persistent": true
     }
 }
