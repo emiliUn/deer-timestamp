@@ -28,6 +28,7 @@ document.getElementById("reload").addEventListener("click", initFields);
  * @param {*} dateObj 
  */
 function displayDate(dateObj){
+    dateObj = new Date(dateObj);
     // Display ISO and UTC
     document.getElementById('ts_iso_format').innerHTML = dateObj.toISOString();
     document.getElementById('ts_utc_format').innerHTML = dateObj.toUTCString();
@@ -38,13 +39,14 @@ function displayDate(dateObj){
  * @param {*} dateObj 
  */
 function displayHumanDate(dateObj){
+    dateObj = new Date(dateObj);
     // Display human readable date
-    document.getElementById("y_user_input").defaultValue  = dateObj.getFullYear();
-    document.getElementById("mon_user_input").defaultValue  = dateObj.getMonth()+1;
-    document.getElementById("d_user_input").defaultValue  = dateObj.getDate();
-    document.getElementById("h_user_input").defaultValue  = dateObj.getHours();
-    document.getElementById("min_user_input").defaultValue  = dateObj.getMinutes();
-    document.getElementById("s_user_input").defaultValue  = dateObj.getSeconds();
+    document.getElementById("y_user_input").value  = dateObj.getFullYear();
+    document.getElementById("mon_user_input").value  = dateObj.getMonth()+1;
+    document.getElementById("d_user_input").value  = dateObj.getDate();
+    document.getElementById("h_user_input").value  = dateObj.getHours();
+    document.getElementById("min_user_input").value  = dateObj.getMinutes();
+    document.getElementById("s_user_input").value  = dateObj.getSeconds();
 }
 
 /**
@@ -54,8 +56,8 @@ function displayHumanDate(dateObj){
 function displayTsDate(dateObj){
     // Display TS
     let tsToDisplay = + dateObj;
-    document.getElementById("ms_s_checkbox").checked ? null : tsToDisplay = tsToDisplay.toString().substr(0, 10); // remove 3 last number (mills)
-    document.getElementById("ts_user_input").defaultValue  = tsToDisplay;
+    document.getElementById("ms_s_checkbox").checked ? null : tsToDisplay = Math.round(tsToDisplay/1000); // remove 3 last number (mills)
+    document.getElementById("ts_user_input").value  = tsToDisplay;
 }
 
 /**
@@ -86,8 +88,8 @@ function processInputTs(){
     const err = validateTs(userTs);
 
     if(err === null){
-        // if user input a sec ts we converti it into a mill ts
-        userTs.length === 10 ? userTs = userTs*1000 : null;
+        // if user input a sec ts we convert it into a mill ts
+        userTs.length <= 10 ? userTs = userTs*1000 : null;
         dateObj = new Date(+userTs);
         displayTsDate(dateObj); displayHumanDate(dateObj); displayDate(dateObj);
     }else{
@@ -99,21 +101,30 @@ function processInputTs(){
  * Process an input human readable date
  */
 function processInputDate(){
-    // Hide error tst if necessary
+    // Hide error if necessary
     document.getElementById("error_div").style.display = "none";
     
     // get values from input
-    const yUserInput = document.getElementById("y_user_input").value;
-    const monUserInput = document.getElementById("mon_user_input").value;
-    const dUserInput = document.getElementById("d_user_input").value;
-    const hUserInput = document.getElementById("h_user_input").value;
-    const minUserInput = document.getElementById("min_user_input").value;
-    const sUserInput = document.getElementById("s_user_input").value;
+    let yUserInput = document.getElementById("y_user_input").value;
+    let monUserInput = document.getElementById("mon_user_input").value;
+    let dUserInput = document.getElementById("d_user_input").value;
+    let hUserInput = document.getElementById("h_user_input").value;
+    let minUserInput = document.getElementById("min_user_input").value;
+    let sUserInput = document.getElementById("s_user_input").value;
 
+    // convert from string to int
+    yUserInput = parseInt(yUserInput);
+    monUserInput = parseInt(monUserInput);
+    dUserInput = parseInt(dUserInput);
+    hUserInput = parseInt(hUserInput);
+    minUserInput = parseInt(minUserInput);
+    sUserInput = parseInt(sUserInput);
+    
     // Check inputs
     const err = checkInputeDateFields(yUserInput, monUserInput, dUserInput, hUserInput, minUserInput, sUserInput)
 
-    if(err === null){
+    // TODO: do something better for this "if" statement
+    if(err === null || err === undefined){
         dateObj = +new Date(yUserInput, monUserInput-1, dUserInput, hUserInput, minUserInput, sUserInput);
         displayTsDate(dateObj); displayHumanDate(dateObj); displayDate(dateObj);
     }else{
@@ -126,11 +137,10 @@ function processInputDate(){
  * @param {*} userTs 
  */
 function validateTs(userTs) {
-
     if (userTs === "")
         return ERR_MSG_MISSING_TS;
 
-    if (userTs.length !== 10 && userTs.length !== 13)
+    if (userTs.length > 13)
         return ERR_MSG_WRONG_TS_FROMAT;
 
     return null;

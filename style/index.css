@@ -141,3 +141,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 } 
 /* TOGGLE SWITCH CSS : END*/
+
+#h_user_input{
+    margin-left: 5px;
+}
