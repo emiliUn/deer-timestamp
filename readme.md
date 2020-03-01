@@ -2,9 +2,9 @@
 
 Deer Timestamp Add-On is a module that allow you to convert a Unix timestamp into a human readable date. A human readable date can be converted into timestamp too. Pretty amazing ! The module support iso8601 and UTC format. It display timestamp in seconds or milliseconds.
 
-This add-on is multi-platform and mlti-web-borwser.
+This add-on is multi-platform and multi-web-borwser.
 
-## :smiley: Getting Started
+## :rocket: Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for standard use or debugging mode.
 
@@ -14,12 +14,12 @@ You need a web-brower. We recommend Firefox and Chrome :
 * Firefox minimum recommanded version: Firefox Quantum 59 (59.0)
 * Chrome minimum recommanded version: Chrome 64.0.3282
 
-### Installation from store
+### :smiley: Installation from store
 
-Firefox: go on https://addons.mozilla.org/fr/firefox/. Find and download the extensions.
+Firefox: go on https://addons.mozilla.org/fr/firefox/. Find and download the extension.
 For more information, read Firefox support: https://support.mozilla.org/en-US/products/firefox
 
-Chrome: go on https://chrome.google.com/webstore/category/extensions. Find and download the extensions.
+Chrome: go on https://chrome.google.com/webstore/category/extensions. Find and download the extension.
 For more information, read Google support: https://support.google.com/chrome_webstore/answer/2664769
 
 ### :nut_and_bolt: Manual installation (from source code)
@@ -36,12 +36,12 @@ You can get the extensions without using an official extensions store. You will 
 #### Chrome
 
 * Download the source code from github: https://github.com/emiliUn/deer-timestamp
-* Open Chrome, go to this url: "chrome://extensions/"/ It open the extensions interface.
+* Open Chrome, go to this url: "chrome://extensions//" It open the extension interface.
 * Enable the "developer mode" (top-right)
 * Click on "Load unpacked extensions ..."
 * Choose the manifest of the extension (or any extension's file)
 
-For more information, read google support: https://support.google.com/chrome_webstore/answer/2664769
+For more informations, read google support: https://support.google.com/chrome_webstore/answer/2664769
 
 ## :pick: Built With
 
@@ -53,11 +53,11 @@ For more information, read google support: https://support.google.com/chrome_web
 
 ## :computer: Contributing
 
-Contact us at sample@sample.com (or visit https://github.com/emiliUn) for details on our code of conduct, and the process for submitting pull requests to us.
+WIP : Contact us at sample@sample.com (or visit https://github.com/emiliUn) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## :pencil2: Authors
 
-See also the list of [contributors](https://xxxx.com/projects/contributors) who participated in this project.
+WIP : See also the list of [contributors](https://xxxx.com/projects/contributors) who participated in this project.
 
 ## :police_car: License
 
