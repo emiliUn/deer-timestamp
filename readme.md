@@ -4,6 +4,8 @@ Deer Timestamp Add-On is a module that allow you to convert a Unix timestamp int
 
 This add-on is multi-platform and multi-web-borwser.
 
+![Extension screenshot](doc/screen.jpeg)
+
 ## :rocket: Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for standard use or debugging mode.
